@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.todolist.Menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_plannedFragment"
+            app:destination="@id/plannedFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_shoppingFragment"
+            app:destination="@id/shoppingFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_personal"
+            app:destination="@id/personal" />
+        <action
+            android:id="@+id/action_menuFragment_to_workFragment"
+            app:destination="@id/workFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plannedFragment"
+        android:name="com.example.todolist.Planned.PlannedFragment"
+        android:label="PlannedFragment" />
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="com.example.todolist.Shopping.ShoppingFragment"
+        android:label="ShoppingFragment" />
+    <fragment
+        android:id="@+id/personal"
+        android:name="com.example.todolist.PersonalViewModel.Personal"
+        android:label="fragment_work"
+        tools:layout="@layout/fragment_work" />
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.example.todolist.Work.WorkFragment"
+        android:label="WorkFragment" />
+</navigation>
